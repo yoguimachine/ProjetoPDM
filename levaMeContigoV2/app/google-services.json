@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "141280086154",
+    "project_id": "vou-levar-te-comigo",
+    "storage_bucket": "vou-levar-te-comigo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:141280086154:android:30982df3a39ce9b2ef4573",
+        "android_client_info": {
+          "package_name": "pmd.di.ubi.pt.levamecontigov2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "141280086154-a6odfnn3e4p8fqi07f0u40nlu7skuc7v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA01_0tWr9_f19yJkXWa18EEAVCh5zc224"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "141280086154-a6odfnn3e4p8fqi07f0u40nlu7skuc7v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
