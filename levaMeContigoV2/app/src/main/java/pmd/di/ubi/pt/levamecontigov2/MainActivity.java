@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
 
         titleanimation = AnimationUtils.loadAnimation(this, R.anim.leva_me_animation);
         title.startAnimation(titleanimation);
-
-
+        
         regBtn.setOnClickListener(v -> choice());
     }
+
         public void choice(){
             DBL db = new DBL(this);
             boolean flag = db.chkDB();
