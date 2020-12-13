@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        back = (View)findViewById(R.id.view);
+        back = (View) findViewById(R.id.view);
         regBtn = (ImageButton) findViewById(R.id.regBtn);
-        title = (ImageView)findViewById(R.id.title);
+        title = (ImageView) findViewById(R.id.title);
 
         backanimation = AnimationUtils.loadAnimation(this, R.anim.titleanim);
         back.startAnimation(backanimation);
@@ -36,14 +36,19 @@ public class MainActivity extends AppCompatActivity {
         title.startAnimation(titleanimation);
 
 
-        regBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                regBtn.setImageResource(R.drawable.reg_btn2);
+        regBtn.setOnClickListener(v -> choice());
+    }
+        public void choice(){
+            DBL db = new DBL(this);
+            boolean flag = db.chkDB();
+            regBtn.setImageResource(R.drawable.reg_btn2);
+            if(flag){
                 Intent register = new Intent(MainActivity.this, MainActivity2.class);
                 startActivity(register);
-
             }
-        });
+            else{
+                Intent passeio = new Intent(MainActivity.this, MainActivity3.class);
+                startActivity(passeio);
+            }
+        }
     }
-}
