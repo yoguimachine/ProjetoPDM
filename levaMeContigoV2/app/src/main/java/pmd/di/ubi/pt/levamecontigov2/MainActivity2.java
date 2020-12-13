@@ -22,20 +22,20 @@ import javax.xml.transform.Result;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    ImageView title, email, user;
+    ImageView title, user;
     Animation titleanimation;
     EditText usertxt;
-    ImageButton startBtn, menu;
+    ImageButton startBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
         title = (ImageView)findViewById(R.id.title);
         user = (ImageView)findViewById(R.id.user);
         startBtn = (ImageButton) findViewById(R.id.startBtn);
-        menu = (ImageButton) findViewById(R.id.menu);
-        usertxt = (EditText) findViewById(R.id.emailtxt);
+        usertxt = (EditText) findViewById(R.id.usertxt);
 
         titleanimation = AnimationUtils.loadAnimation(this, R.anim.titleanim);
         title.startAnimation(titleanimation);
@@ -46,14 +46,6 @@ public class MainActivity2 extends AppCompatActivity {
 
         startBtn.setOnClickListener(v -> geraToken());
 
-        menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                menu.setImageResource(R.drawable.menu2);
-                Intent main = new Intent(MainActivity2.this, MainActivity.class);
-                startActivity(main);
-            }
-        });
     }
 
     public void geraToken(){

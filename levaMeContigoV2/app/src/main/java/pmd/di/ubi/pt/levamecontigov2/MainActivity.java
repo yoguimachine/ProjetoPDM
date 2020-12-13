@@ -10,10 +10,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton startBtn, regBtn, menu;
+    ImageButton regBtn;
     View back;
     ImageView title;
     Animation titleanimation, backanimation;
@@ -25,9 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         back = (View)findViewById(R.id.view);
-        startBtn = (ImageButton) findViewById(R.id.startBtn);
         regBtn = (ImageButton) findViewById(R.id.regBtn);
-        menu = (ImageButton) findViewById(R.id.menu);
         title = (ImageView)findViewById(R.id.title);
 
         backanimation = AnimationUtils.loadAnimation(this, R.anim.titleanim);
@@ -36,14 +35,6 @@ public class MainActivity extends AppCompatActivity {
         titleanimation = AnimationUtils.loadAnimation(this, R.anim.leva_me_animation);
         title.startAnimation(titleanimation);
 
-        startBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startBtn.setImageResource(R.drawable.app_btnstart2);
-                Intent tokensMenu = new Intent(MainActivity.this, MainActivity3.class);
-                startActivity(tokensMenu);
-            }
-        });
 
         regBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 regBtn.setImageResource(R.drawable.reg_btn2);
                 Intent register = new Intent(MainActivity.this, MainActivity2.class);
                 startActivity(register);
+
             }
         });
     }

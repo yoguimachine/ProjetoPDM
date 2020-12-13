@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 
 public class MainActivity3 extends AppCompatActivity {
 
-    ImageButton mytkn, othertkn, menu;
+    ImageButton mytkn, othertkn, collection;
     Animation anim;
 
     @Override
@@ -21,16 +21,19 @@ public class MainActivity3 extends AppCompatActivity {
 
         mytkn = (ImageButton)findViewById(R.id.mytoken);
         othertkn = (ImageButton)findViewById(R.id.othertokens);
-        menu = (ImageButton)findViewById(R.id.menu);
+        collection = (ImageButton)findViewById(R.id.collection);
 
         anim = AnimationUtils.loadAnimation(this, R.anim.leva_me_animation);
         mytkn.startAnimation(anim);
         othertkn.startAnimation(anim);
+        collection.startAnimation(anim);
 
         mytkn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mytkn.setImageResource(R.drawable.my_t2);
+                //Intent token = new Intent(MainActivity3.this, MainActivity4.class);
+                //startActivity(token);
             }
         });
 
@@ -38,17 +41,20 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 othertkn.setImageResource(R.drawable.other_t2);
+                //Intent get = new Intent(MainActivity3.this, MainActivity6.class);
+                //startActivity(get);
             }
         });
 
-        menu.setOnClickListener(new View.OnClickListener() {
+        collection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                menu.setImageResource(R.drawable.menu2);
-                Intent main = new Intent(MainActivity3.this, MainActivity.class);
-                startActivity(main);
+                collection.setImageResource(R.drawable.collection_2);
+                //Intent collection = new Intent(MainActivity3.this, MainActivity5.class);
+                //startActivity(collection);
             }
         });
+
 
     }
 }
