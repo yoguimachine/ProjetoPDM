@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     public void choice(){
         DBL db = new DBL(this);
         boolean flag = db.chkDB();
-        regBtn.setImageResource(R.drawable.reg_btn2);
+        regBtn.setImageResource(R.drawable.app_btnstart2);
         if(flag){
             Intent register = new Intent(MainActivity.this, MainActivity2.class);
                 startActivity(register);
