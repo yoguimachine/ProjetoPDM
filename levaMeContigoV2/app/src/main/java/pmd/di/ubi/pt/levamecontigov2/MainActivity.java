@@ -38,23 +38,17 @@ public class MainActivity extends AppCompatActivity {
         regBtn.setOnClickListener(v -> choice());
     }
 
-      regBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-            regBtn.setImageResource(R.drawable.app_btnstart2);
-
-        }
-                public void choice(){
-            DBL db = new DBL(this);
-            boolean flag = db.chkDB();
-            regBtn.setImageResource(R.drawable.reg_btn2);
-            if(flag){
-  Intent register = new Intent(MainActivity.this, MainActivity2.class);
+    public void choice(){
+        DBL db = new DBL(this);
+        boolean flag = db.chkDB();
+        regBtn.setImageResource(R.drawable.reg_btn2);
+        if(flag){
+            Intent register = new Intent(MainActivity.this, MainActivity2.class);
                 startActivity(register);
-            }
-            else{
-                Intent passeio = new Intent(MainActivity.this, MainActivity3.class);
-                startActivity(passeio);
-            }
+        }
+        else{
+            Intent passeio = new Intent(MainActivity.this, MainActivity3.class);
+            startActivity(passeio);
         }
     }
+}
