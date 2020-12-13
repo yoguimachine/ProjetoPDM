@@ -31,7 +31,7 @@
         android:id="@+id/startBtn"
         android:layout_width="185dp"
         android:layout_height="87dp"
-        android:src="@drawable/app_btnstart"
+        android:src="@drawable/reg_btn"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

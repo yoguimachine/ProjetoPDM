@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         regBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                regBtn.setImageResource(R.drawable.reg_btn2);
+                regBtn.setImageResource(R.drawable.app_btnstart2);
                 Intent register = new Intent(MainActivity.this, MainActivity2.class);
                 startActivity(register);
 

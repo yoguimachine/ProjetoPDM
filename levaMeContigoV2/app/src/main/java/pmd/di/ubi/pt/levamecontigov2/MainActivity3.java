@@ -32,8 +32,8 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mytkn.setImageResource(R.drawable.my_t2);
-                //Intent token = new Intent(MainActivity3.this, MainActivity4.class);
-                //startActivity(token);
+                Intent token = new Intent(MainActivity3.this, MainActivity4.class);
+                startActivity(token);
             }
         });
 
@@ -41,8 +41,8 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 othertkn.setImageResource(R.drawable.other_t2);
-                //Intent get = new Intent(MainActivity3.this, MainActivity6.class);
-                //startActivity(get);
+                Intent get = new Intent(MainActivity3.this, MainActivity6.class);
+                startActivity(get);
             }
         });
 
@@ -50,8 +50,8 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 collection.setImageResource(R.drawable.collection_2);
-                //Intent collection = new Intent(MainActivity3.this, MainActivity5.class);
-                //startActivity(collection);
+                Intent collection = new Intent(MainActivity3.this, MainActivity5.class);
+                startActivity(collection);
             }
         });
 
