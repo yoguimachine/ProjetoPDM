@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgapp"
+    tools:context=".MainActivity4">
+
+
+    <ImageView
+        android:id="@+id/collection"
+        android:layout_width="185dp"
+        android:layout_height="239dp"
+        android:src="@drawable/token"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.369" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/app_bkg"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="745dp"
+        android:layout_height="260dp"
+        android:src="@drawable/mytoken"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.405" />
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.455" />
+
+    <ImageButton
+        android:id="@+id/returnHome"
+        android:layout_width="185dp"
+        android:layout_height="87dp"
+        android:src="@drawable/regressar"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.942" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
