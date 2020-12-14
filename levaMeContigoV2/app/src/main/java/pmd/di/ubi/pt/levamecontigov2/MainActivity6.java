@@ -40,7 +40,7 @@ public class MainActivity6 extends AppCompatActivity {
         collection15=(ImageView)findViewById(R.id.collection15);
 
         trocar = (ImageButton)findViewById(R.id.trocar);
-            trocar.setVisibility(View.INVISIBLE);
+        trocar.setVisibility(View.INVISIBLE);
 
         anim = AnimationUtils.loadAnimation(this, R.anim.anim3);
         collection.setOnTouchListener(new View.OnTouchListener() {
@@ -236,6 +236,13 @@ public class MainActivity6 extends AppCompatActivity {
                 }else
                     collection15.setImageResource(R.drawable.possible);
                 return true;
+            }
+        });
+
+        trocar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                trocar.setImageResource(R.drawable.trocar2);
             }
         });
 
