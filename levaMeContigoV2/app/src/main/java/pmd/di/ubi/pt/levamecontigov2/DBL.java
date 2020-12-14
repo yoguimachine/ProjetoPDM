@@ -70,6 +70,7 @@ public class DBL extends SQLiteOpenHelper {
             user_id.add(username);
             user_id.add(id);
         }
+        cur.close();
         return user_id;
     }
 }
