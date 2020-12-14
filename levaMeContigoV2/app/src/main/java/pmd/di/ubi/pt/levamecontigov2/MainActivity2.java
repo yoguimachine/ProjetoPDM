@@ -57,7 +57,8 @@ public class MainActivity2 extends AppCompatActivity {
         //Toast check =  new Toast();
         myToken.setUsername(auxUsername);
         DBL database = new DBL(this);
-        database.addToken(myToken.getUsername().get(0), myToken.getId());
+        if (database.chkDB())
+            database.addToken(myToken.getUsername().get(0), myToken.getId());
         Intent userMenu = new Intent(MainActivity2.this, MainActivity3.class);
         startActivity(userMenu);
     }
