@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
 
 import static pmd.di.ubi.pt.levamecontigov2.Contract.TabelaTokens.TABLE_NAME;
@@ -59,4 +60,17 @@ public class DBL extends SQLiteOpenHelper {
     }
 
     //TODO função para mostrar os atributos no nosso token
+    public List<String> user_id() {
+        ArrayList<String> user_id= new ArrayList<>();
+        Cursor cur = database.rawQuery("SELECT " + Contract.TabelaTokens.COLUMN_USERNAME + ", " +
+                Contract.TabelaTokens.COLUMN_ID + " FROM " + TABLE_NAME, null);
+        if(cur.moveToFirst()){
+            String username = (cur.getString(cur.getColumnIndex(Contract.TabelaTokens.COLUMN_USERNAME)));
+            String id = (cur.getString(cur.getColumnIndex(Contract.TabelaTokens.COLUMN_ID)));
+            user_id.add(username);
+            user_id.add(id);
+        }
+        cur.close();
+        return user_id;
+    }
 }
