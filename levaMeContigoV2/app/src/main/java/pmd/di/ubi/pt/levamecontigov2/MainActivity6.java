@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -35,7 +36,7 @@ public class MainActivity6 extends AppCompatActivity {
     ImageView qrvalue;
     CodeScanner codeScanner;
     CodeScannerView scannerView;
-    TextView qr;
+    EditText qr;
 
 
     @SuppressLint("ClickableViewAccessibility")
@@ -78,7 +79,6 @@ public class MainActivity6 extends AppCompatActivity {
         });
 
         ler.setOnClickListener(v -> checkqr());
-        System.out.println(qr.getText().toString());
 
     }
 
@@ -92,11 +92,12 @@ public class MainActivity6 extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        qr.setText(result.getText().toString());
+                        ler.setImageResource(R.drawable.read);
+                        scannerView.setVisibility(View.INVISIBLE);
+                        qr.setText(result.toString());
                         codeScanner.stopPreview();
                         scannerView.setVisibility(View.INVISIBLE);
                         codeScanner.releaseResources();
-                        ler.setImageResource(R.drawable.read);
                     }
                 });
             }
