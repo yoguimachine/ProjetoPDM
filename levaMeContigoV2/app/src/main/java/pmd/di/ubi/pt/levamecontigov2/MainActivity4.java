@@ -17,6 +17,9 @@ public class MainActivity4 extends AppCompatActivity {
     ImageButton regressar, stats, notifs;
     Animation anim;
     ImageView mytoken;
+    ImageButton regressar, stats, notif;
+    ImageView token;
+    Animation anim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
