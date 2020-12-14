@@ -21,7 +21,7 @@ import androidmads.library.qrgenearator.QRGEncoder;
 
 public class MainActivity6 extends AppCompatActivity {
 
-    ImageButton trocar;
+    ImageButton gerar, ler;
     Animation anim;
     ImageView qrvalue;
 
@@ -32,17 +32,18 @@ public class MainActivity6 extends AppCompatActivity {
 
         setContentView(R.layout.activity_main6);
 
-        trocar = (ImageButton)findViewById(R.id.trocar);
+        gerar = (ImageButton)findViewById(R.id.gerar);
+        ler = (ImageButton)findViewById(R.id.ler);
         qrvalue = findViewById(R.id.qrcodeholder);
 
-        trocar.setVisibility(View.VISIBLE);
+        gerar.setVisibility(View.VISIBLE);
 
         anim = AnimationUtils.loadAnimation(this, R.anim.anim3);
 
-        trocar.setOnClickListener(new View.OnClickListener() {
+        gerar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                trocar.setImageResource(R.drawable.trocar2);
+                gerar.setImageResource(R.drawable.generate2);
                 //Intent troca = new Intent(MainActivity6.this, MainActivity7.class);
                 //startActivity(troca);
                 //TODO: ir buscar a string s à segunda entrada da base de dados que é o token que temos de momento
@@ -54,6 +55,13 @@ public class MainActivity6 extends AppCompatActivity {
                 } catch(Exception e){
                     e.printStackTrace();
                 }
+            }
+        });
+
+        ler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ler.setImageResource(R.drawable.read2);
             }
         });
 

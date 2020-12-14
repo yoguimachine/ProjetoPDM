@@ -31,15 +31,26 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/trocar"
+        android:id="@+id/ler"
         android:layout_width="185dp"
         android:layout_height="87dp"
-        android:src="@drawable/trocar"
+        android:src="@drawable/read"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.855" />
+        app:layout_constraintVertical_bias="0.905" />
+
+    <ImageButton
+        android:id="@+id/gerar"
+        android:layout_width="185dp"
+        android:layout_height="87dp"
+        android:src="@drawable/generate"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734" />
 
     <ImageView
         android:id="@+id/qrcodeholder"
@@ -47,8 +58,10 @@
         android:layout_height="186dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.438"
         app:srcCompat="@android:drawable/screen_background_dark_transparent" />
 
 
