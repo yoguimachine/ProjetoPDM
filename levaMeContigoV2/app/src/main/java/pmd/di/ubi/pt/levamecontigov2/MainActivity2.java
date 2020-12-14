@@ -48,6 +48,8 @@ public class MainActivity2 extends AppCompatActivity {
 
     }
 
+
+
     public void geraToken(){
         startBtn.setImageResource(R.drawable.reg_btn2);
         Token myToken = new Token();

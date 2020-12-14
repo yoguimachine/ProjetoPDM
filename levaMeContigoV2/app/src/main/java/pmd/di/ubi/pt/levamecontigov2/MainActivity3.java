@@ -23,9 +23,9 @@ public class MainActivity3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-        mytkn = (ImageButton)findViewById(R.id.mytoken);
-        othertkn = (ImageButton)findViewById(R.id.othertokens);
-        collection = (ImageButton)findViewById(R.id.collection);
+        mytkn = (ImageButton) findViewById(R.id.mytoken);
+        othertkn = (ImageButton) findViewById(R.id.othertokens);
+        collection = (ImageButton) findViewById(R.id.collection);
 
         anim = AnimationUtils.loadAnimation(this, R.anim.leva_me_animation);
         mytkn.startAnimation(anim);
@@ -60,7 +60,12 @@ public class MainActivity3 extends AppCompatActivity {
                 startActivity(collection);
             }
         });
-
-
+    }
+    @Override
+    public void onResume () {
+        super.onResume();
+        othertkn.setImageResource(R.drawable.other_t);
+        mytkn.setImageResource(R.drawable.my_t);
+        collection.setImageResource(R.drawable.collection);
     }
 }

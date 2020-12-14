@@ -91,4 +91,11 @@ public class MainActivity4 extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onResume () {
+        super.onResume();
+        regressar.setImageResource(R.drawable.regressar);
+        notif.setImageResource(R.drawable.notifs);
+    }
 }

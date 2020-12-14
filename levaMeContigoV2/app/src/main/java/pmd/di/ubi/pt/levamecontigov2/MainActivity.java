@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         regBtn.setOnClickListener(v -> choice());
     }
 
+
     public void choice(){
         DBL db = new DBL(this);
         boolean flag = db.chkDB();
@@ -50,5 +51,11 @@ public class MainActivity extends AppCompatActivity {
             Intent passeio = new Intent(MainActivity.this, MainActivity3.class);
             startActivity(passeio);
         }
+    }
+
+    @Override
+    public void onResume () {
+        super.onResume();
+        regBtn.setImageResource(R.drawable.app_btnstart);
     }
 }
