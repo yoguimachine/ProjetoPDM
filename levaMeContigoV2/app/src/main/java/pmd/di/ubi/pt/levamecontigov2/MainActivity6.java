@@ -3,6 +3,7 @@ package pmd.di.ubi.pt.levamecontigov2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -243,6 +244,8 @@ public class MainActivity6 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 trocar.setImageResource(R.drawable.trocar2);
+                Intent troca = new Intent(MainActivity6.this, MainActivity7.class);
+                startActivity(troca);
             }
         });
 

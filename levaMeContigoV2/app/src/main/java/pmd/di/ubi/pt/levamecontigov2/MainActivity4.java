@@ -39,6 +39,7 @@ public class MainActivity4 extends AppCompatActivity {
         anim = AnimationUtils.loadAnimation(this, R.anim.anim3);
 
         regressar=(ImageButton)findViewById(R.id.returnHome);
+        notif=(ImageButton)findViewById(R.id.notifs);
         regressar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,10 +69,36 @@ public class MainActivity4 extends AppCompatActivity {
             }
         });
 
+        token = (ImageView)findViewById(R.id.collection);
+        stats = (ImageButton)findViewById(R.id.stats);
+        stats.setVisibility(View.INVISIBLE);
+
+        anim = AnimationUtils.loadAnimation(this, R.anim.anim3);
+
+        token.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    stats.setVisibility(View.VISIBLE);
+                    stats.startAnimation(anim);
+                }else {
+                    //do nothing
+                }
+                return true;
+            }
+        });
+
         stats.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 stats.setImageResource(R.drawable.stats2);
+            }
+        });
+
+        notif.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                notif.setImageResource(R.drawable.notifs2);
             }
         });
     }
