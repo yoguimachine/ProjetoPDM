@@ -13,6 +13,10 @@ public class MainActivity3 extends AppCompatActivity {
 
     ImageButton mytkn, othertkn, collection;
     Animation anim;
+    public static final String USERNAME = "pmd.di.ubi.pt.levamecontigov2.extra.USERNAME";
+    public static final String ID = "pmd.di.ubi.pt.levamecontigov2.extra.ID";
+    public String username;
+    public String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,8 @@ public class MainActivity3 extends AppCompatActivity {
             public void onClick(View v) {
                 mytkn.setImageResource(R.drawable.my_t2);
                 Intent token = new Intent(MainActivity3.this, MainActivity4.class);
+                token.putExtra(USERNAME, username);
+                token.putExtra(ID, id);
                 startActivity(token);
             }
         });

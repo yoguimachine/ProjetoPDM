@@ -2,6 +2,7 @@ package pmd.di.ubi.pt.levamecontigov2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -16,6 +17,7 @@ public class MainActivity6 extends AppCompatActivity {
     ImageButton trocar;
     Animation anim;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +43,6 @@ public class MainActivity6 extends AppCompatActivity {
             trocar.setVisibility(View.INVISIBLE);
 
         anim = AnimationUtils.loadAnimation(this, R.anim.anim3);
-
         collection.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {

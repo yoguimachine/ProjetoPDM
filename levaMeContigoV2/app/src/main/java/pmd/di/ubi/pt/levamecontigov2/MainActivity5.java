@@ -13,5 +13,8 @@ public class MainActivity5 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5);
+        //TODO Gui Miguel aceder tokens da base de dados e mostralos;
+        //TODO Carlos atualizacao da base de dados de tokens
+        //TODO Nuno Afonso pasta de notificacoes
     }
 }

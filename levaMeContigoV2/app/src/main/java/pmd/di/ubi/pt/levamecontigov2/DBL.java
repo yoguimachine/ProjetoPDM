@@ -57,4 +57,6 @@ public class DBL extends SQLiteOpenHelper {
         cv.put(Contract.TabelaTokens.COLUMN_ID, id);
         database.insert(TABLE_NAME, null, cv);
     }
+
+    //TODO função para mostrar os atributos no nosso token
 }
