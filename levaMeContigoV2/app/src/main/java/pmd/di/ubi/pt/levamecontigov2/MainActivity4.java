@@ -14,12 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity4 extends AppCompatActivity {
 
-    ImageButton regressar, stats, notifs;
+    ImageButton regressar, stats, notif;
     Animation anim;
     ImageView mytoken;
-    ImageButton regressar, stats, notif;
-    ImageView token;
-    Animation anim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +26,7 @@ public class MainActivity4 extends AppCompatActivity {
         TextView nome = findViewById(R.id.nome);
         TextView identificador = findViewById(R.id.id);
         mytoken=(ImageView)findViewById(R.id.collection);
-        notifs=(ImageButton)findViewById(R.id.notifs);
+        notif=(ImageButton)findViewById(R.id.notifs);
         stats=(ImageButton)findViewById(R.id.stats);
 
         Intent token = getIntent();
@@ -52,10 +49,10 @@ public class MainActivity4 extends AppCompatActivity {
             //TODO Nuno Fonso, pasta de notificoes, Carlos meter as alteracoes nas notificaçoes
         });
 
-        notifs.setOnClickListener(new View.OnClickListener() {
+        notif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                notifs.setImageResource(R.drawable.notifs2);
+                notif.setImageResource(R.drawable.notifs2);
             }
             //TODO Carlos atualizacao do token
             //TODO Nuno Fonso, pasta de notificoes, Carlos meter as alteracoes nas notificaçoes
@@ -72,13 +69,13 @@ public class MainActivity4 extends AppCompatActivity {
             }
         });
 
-        token = (ImageView)findViewById(R.id.collection);
+        mytoken = (ImageView)findViewById(R.id.collection);
         stats = (ImageButton)findViewById(R.id.stats);
         stats.setVisibility(View.INVISIBLE);
 
         anim = AnimationUtils.loadAnimation(this, R.anim.anim3);
 
-        token.setOnTouchListener(new View.OnTouchListener() {
+        mytoken.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
